@@ -1,0 +1,51 @@
+{
+  "name": "Note",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "file_url": {
+      "type": "string"
+    },
+    "file_name": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "key_points": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "diagram_description": {
+      "type": "string"
+    },
+    "image_references": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "subject": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "processing",
+        "ready",
+        "failed"
+      ],
+      "default": "processing"
+    },
+    "page_count": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "title"
+  ]
+}
