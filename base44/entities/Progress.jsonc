@@ -1,0 +1,36 @@
+{
+  "name": "Progress",
+  "type": "object",
+  "properties": {
+    "subject": {
+      "type": "string"
+    },
+    "notes_uploaded": {
+      "type": "number",
+      "default": 0
+    },
+    "quizzes_taken": {
+      "type": "number",
+      "default": 0
+    },
+    "average_score": {
+      "type": "number",
+      "default": 0
+    },
+    "flashcards_reviewed": {
+      "type": "number",
+      "default": 0
+    },
+    "study_minutes": {
+      "type": "number",
+      "default": 0
+    },
+    "last_active": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "subject"
+  ]
+}
