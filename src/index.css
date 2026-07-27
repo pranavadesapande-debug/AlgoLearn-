@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 250 50% 98%;
+    --foreground: 240 10% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 10%;
+    --primary: 256 83% 58%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 250 50% 95%;
+    --secondary-foreground: 256 83% 30%;
+    --muted: 250 30% 96%;
+    --muted-foreground: 240 5% 45%;
+    --accent: 280 80% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 250 30% 90%;
+    --input: 250 30% 90%;
+    --ring: 256 83% 58%;
+    --chart-1: 256 83% 58%;
+    --chart-2: 280 80% 60%;
+    --chart-3: 199 89% 52%;
+    --chart-4: 43 96% 64%;
+    --chart-5: 160 70% 45%;
+    --radius: 0.75rem;
+    --font-heading: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Sora', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --sidebar-background: 256 40% 12%;
+    --sidebar-foreground: 250 30% 85%;
+    --sidebar-primary: 256 83% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 256 30% 20%;
+    --sidebar-accent-foreground: 250 30% 95%;
+    --sidebar-border: 256 30% 22%;
+    --sidebar-ring: 256 83% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)];
+  }
+  .glass-dark {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+  .gradient-text {
+    @apply bg-gradient-to-r from-violet-600 via-indigo-600 to-sky-500 bg-clip-text text-transparent;
+  }
+  .gradient-border {
+    position: relative;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(135deg, hsl(256 83% 58%), hsl(280 80% 60%), hsl(199 89% 52%)) border-box;
+    border: 1.5px solid transparent;
+  }
+  .mesh-bg {
+    background-color: hsl(var(--background));
+    background-image:
+      radial-gradient(at 15% 20%, hsl(256 83% 90% / 0.35) 0px, transparent 50%),
+      radial-gradient(at 85% 10%, hsl(280 80% 92% / 0.3) 0px, transparent 50%),
+      radial-gradient(at 70% 85%, hsl(199 89% 90% / 0.3) 0px, transparent 50%);
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Sora:wght@400;600;700;800&display=swap');
